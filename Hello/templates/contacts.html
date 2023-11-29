@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+<div class="container-fluid">
+   <img src="{% static 'images/contact-us.jpeg' %}" class="d-block w-100 my-4" alt="Contact Us" height="500">
+</div>
+<div class="container">
+   <h2 class="text-center">Contact Us</h2>
+      <form method="post" action="/contacts">
+         {% csrf_token %}
+         <div class="mb-3">
+           <label for="fullName" class="form-label">Full Name</label>
+           <input type="text" class="form-control" id="fullName" name="full_name" placeholder="Enter your full name" required>
+         </div>
+         <div class="mb-3">
+           <label for="city" class="form-label">City</label>
+           <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city" required>
+         </div>
+         <div class="mb-3">
+           <label for="phoneNumber" class="form-label">Phone Number</label>
+           <input type="tel" class="form-control" id="phoneNumber" name="phone_number" placeholder="Enter your phone number" required>
+         </div>
+         <div class="mb-3">
+           <label for="gmail" class="form-label">Email address</label>
+           <input type="email" class="form-control" id="gmail" name="email_address" placeholder="Enter your email" required>
+         </div>
+         <div class="mb-3">
+           <label for="countryMasters" class="form-label">Planning to do Masters in which country</label>
+           <input type="text" class="form-control" id="countryMasters" name="planning_which_country" placeholder="Enter country name" required>
+         </div>
+         <div class="mb-3">
+           <label for="qualification" class="form-label">Qualification</label>
+           <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Enter your qualification" required>
+         </div>
+         <div class="mb-3">
+           <label for="aboutYourself" class="form-label">Tell about yourself (optional)</label>
+           <textarea class="form-control" id="aboutYourself" name="tell_about_yourself" rows="3" placeholder="Tell us about yourself"></textarea>
+         </div>
+         <button type="submit" class="btn btn-primary">Submit</button>
+       </form>
+</div>
+{% endblock %}
