@@ -36,6 +36,6 @@ def contacts(request):
         )
         contact.save()
         messages.success(request, "Yor details has been saved our executive will contact you...!")
-          # You might want to redirect to a success page
+          
         
     return render(request, "contacts.html")

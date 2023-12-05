@@ -19,7 +19,7 @@ from django.urls import path,include
 
 admin.site.site_header="Fasi Web Site Admin"
 admin.site.site_title="Fasi admin portal"
-admin.site.index_title="Welcome to fasi portal"
+admin.site.index_title="Welcome to Arka Consultancy"
 
 
 urlpatterns = [
