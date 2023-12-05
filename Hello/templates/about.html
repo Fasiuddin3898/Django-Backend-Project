@@ -1,5 +1,19 @@
-{% extends "base.html" %}
-{% block title %}About{% endblock title %}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
 {% block body %}
-    About block
-{% endblock  %}
+<div class="container mt-4">
+    <h1>About Arka Consultants</h1>
+    <p>Welcome to Arka Consultants! We are dedicated to providing high-quality consultancy services for abroad studies.</p>
+    <p>Our Mission:</p>
+    <ul>
+        <li>Provide exceptional consultancy services</li>
+        <li>Deliver value to our clients</li>
+        <li>Drive success through expertise</li>
+    </ul>
+    <p>Contact us for more information about our consultancy services.</p>
+
+    <!-- Image tag added -->
+    <img src="{% static 'images/image-2.jpeg' %}" class="img-fluid" alt="Arka Consultants">
+</div>
+{% endblock body %}
